@@ -5,8 +5,8 @@ import java.util.List;
 import com.example.demo.entity.Produit;
 
 public interface IProduitService {
-   List<Produit> getProduits();
-   void addProduit(Produit produit);
-   void UpdateProduit(Produit produit);
-   void DeleteProduit(String ref);
-}
+	   List<Produit> getProduits();
+	   void addProduit(Produit produit);
+	   void UpdateProduit(Produit produit);
+	   void DeleteProduit(Long id);
+	}

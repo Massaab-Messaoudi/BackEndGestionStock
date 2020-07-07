@@ -15,12 +15,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.entity.Produit;
 import com.example.demo.service.IProduitService;
+import com.example.demo.service.ProduitService;
 @RestController
 @RequestMapping("/api/produit")
 @CrossOrigin
 public class ProduitController {
 @Autowired	
 private IProduitService produitService;	
+
 	
 @GetMapping
 public List<Produit> getProduits() 
@@ -40,10 +42,12 @@ public void UpdateProduit(@RequestBody Produit produit)
     this.produitService.UpdateProduit(produit);
 }
 
-@DeleteMapping("/{ref}")
-public void DeleteProduit(@PathVariable String ref) 
+@DeleteMapping("/{id}")
+public void DeleteProduit(@PathVariable Long id) 
  {
-    produitService.DeleteProduit(ref);	
+	
+    produitService.DeleteProduit(id);	
+    
  }
 
 }

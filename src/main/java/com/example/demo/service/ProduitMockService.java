@@ -38,13 +38,17 @@ public class ProduitMockService implements IProduitService{
 		
 	}
 
+	
 	@Override
-	public void DeleteProduit(String ref) {
+	public void DeleteProduit(Long id) {
+		
 		// TODO Auto-generated method stub
 		Produit produit=new Produit();
-		produit.setRef(ref);
+		produit.setId(id);
 		produits.remove(produit);
 		
-	}
+		
+       }
+
 
 }
